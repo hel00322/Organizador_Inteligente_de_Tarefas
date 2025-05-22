@@ -33,7 +33,7 @@ void adicionarTarefa(Tarefa tarefas[], int *quantidade) {
     Tarefa nova;//cria uma variavel para armazenar os dados da tarefa
 
     printf("\nDigite o titulo da tarefa: ");
-    getchar(); // Limpa o enter do teclado (nao sei pq mas estava pulando a parte do titulo ai useu isso para limpar a memoria do teclado e ele entender que nao estava entrando uma variavel vazia " ")
+    getchar(); //limpa o enter do teclado (nao sei pq mas estava pulando a parte do titulo ai useu isso para limpar a memoria do teclado e ele entender que nao estava entrando uma variavel vazia " ")
     fgets(nova.titulo, 50, stdin); //usando o fgets pois ele le espacos, nova.titulo eh a variavel, 50 o tamanho e stdin eha origem (teclado)
 
     printf("Quantos dias faltam para o prazo? ");
@@ -58,7 +58,7 @@ void ordenarTarefas(Tarefa tarefas[], int quantidade) {
     for (int i = 0; i < quantidade - 1; i++) {
         for (int j = i + 1; j < quantidade; j++) {
             if (tarefas[j].prioridade > tarefas[i].prioridade) {
-                // Troca as tarefas de lugar
+                //trocando as tarefas de lugar
                 temp = tarefas[i];
                 tarefas[i] = tarefas[j];
                 tarefas[j] = temp;
